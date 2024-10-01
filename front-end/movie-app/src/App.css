@@ -1,0 +1,220 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main-layout-wrapper {
+  height: 100vh;
+  min-width: 1400px;
+  max-width: 1400px;
+  overflow-x: hidden;
+  overflow-y: visible !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: linear-gradient(#1a2632, #6d6165);
+}
+.main-layout-wrapper::-webkit-scrollbar {
+  width: 0.25rem;
+}
+.main-layout-wrapper::-webkit-scrollbar-track {
+  background-color: #d1e5ff;
+}
+.main-layout-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(#000000, #ffffff);
+}
+.brand-layout-wrapper {
+  background-color: transparent !important;
+}
+.item-movie {
+  border: solid 2px #fff;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-pagination {
+  display: none;
+}
+
+.brand-layout-wrapper:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transform: scale(1.01); /* Zooms the image */
+  transition: ease-in-out 0.4s;
+}
+.item-poster:hover {
+  transform: scale(1.02); /* Zooms the image */
+  transition: ease-in-out 0.5s;
+}
+.review-tab {
+  border-right: 1px solid #fff;
+}
+.background-app {
+  transition: background-image ease 0.4s;
+}
+.bg-website {
+  transition: opacity 0.5s ease-in-out;
+}
+.transition-poster {
+  transition: ease-in-out 1s;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.item-related {
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+}
+.item-related:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.play-button {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  padding: 1rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.item-poster-suggestion:hover .play-button {
+  opacity: 1;
+}
+
+.content-related:hover .play-button {
+  opacity: 1;
+}
+
+.content-related {
+  background-color: #232d37;
+  border: none;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.content-related:hover {
+  background-color: #171d24;
+}
+.line-comment {
+  height: 1px;
+}
+.border-comment {
+  border: solid 1px #a9a9a9;
+  width: 100%;
+}
+.button-review-modal {
+  background: #4ade80;
+}
+
+.button-review-modal {
+  background-color: #4ade80;
+  color: white;
+  transition: box-shadow 0.5s ease-in-out;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.button-cancel-modal {
+  background: transparent;
+  color: #4ade80;
+  border: 1px solid #4ade80;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  transition: 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.button-cancel-modal:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.button-review-modal:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.login-layout {
+  background: linear-gradient(#000000, #ffffff);
+  border-radius: 0.25rem;
+  width: 20rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.btn-login {
+  padding: 0.25rem 2rem;
+  margin-top: 2rem !important;
+}
+/* CSS cho slide in */
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-exit {
+  transform: translateX(0);
+}
+
+.slide-exit-active {
+  transform: translateX(-100%)!important;
+  transition: transform 0.5s ease-in-out;
+}
+
+.progress-container {
+  position: relative;
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
